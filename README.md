@@ -28,35 +28,36 @@ This project is based on dAppServer/wails-build-action and is modified to match 
 
 ## GitHub Action Options
 
-| Name                     | Default              | Description                                                   |
-| ------------------------ | -------------------- | ------------------------------------------------------------- |
-| `app-working-directory`  | `.`                  | Working directory of your [Wails](https://wails.app/) project |
-| `build-name`             | none, required input | The name of the binary                                        |
-| `build`                  | `true`               | Runs `wails build` on your source                             |
-| `nsis`                   | `true`               | Runs `wails build` with ot without -nsis                      |
-| `sign`                   | `false`              | After build, signs and creates signed installers              |
-| `package`                | `true`               | Upload workflow artifacts & publish release on tag            |
-| `build-platform`         | `darwin/universal`   | Platform to build for                                         |
-| `wails-version`          | `latest`             | Wails version to use                                          |
-| `wails-build-webview2`   | `download`           | Webview2 installing [download,embed,browser,error]            |
-| `go-version`             | `1.18`               | Version of Go to use                                          |
-| `node-version`           | `16.x`               | Node js version                                               |
-| `pnpm-version`           | ''                   | If specified, enables pnpm with the given version             |
-| `pnpm-working-directory` | `.`                  | set pnpm working directory                                    |
-| `pnpm-install`           | `true`               | run pnpm install                                              |
-| `pnpm-prebuild`          | `false`              | use for monorepo builds                                       |
-| `deno-build` | ``                  | Deno compile command                                          |
-|`deno-working-directory`            |`.`                 | Working directory of your [Deno](https://deno.land/) server   |
-|`deno-version`                      |`v1.20.x`           | Deno version to use                                           |
-|`sign-macos-app-id`                 | ''                   | ID of the app signing cert                                    |
-|`sign-macos-apple-password`         | ''                   | MacOS Apple password                                          |
-|`sign-macos-app-cert`               | ''                   | MacOS Application Certificate                                 |
-|`sign-macos-app-cert-password`      | ''                   | MacOS Application Certificate Password                        |
-|`sign-macos-installer-id`           | ''                   | MacOS Installer Certificate id                                |
-|`sign-macos-installer-cert`         | ''                   | MacOS Installer Certificate                                   |
-|`sign-macos-installer-cert-password`| ''                   | MacOS Installer Certificate Password                          |
-|`sign-windows-cert`                 | ''                   | Windows Signing Certificate                                   |
-|`sign-windows-cert-passowrd` | '' | Windows Signing Certificate Password |
+| Name                                 | Default              | Description                                                   |
+| ------------------------------------ | -------------------- | ------------------------------------------------------------- |
+| `app-working-directory`              | `.`                  | Working directory of your [Wails](https://wails.app/) project |
+| `build-name`                         | none, required input | The name of the binary                                        |
+| `build`                              | `true`               | Runs `wails build` on your source                             |
+| `nsis`                               | `true`               | Runs `wails build` with ot without -nsis                      |
+| `sign`                               | `false`              | After build, signs and creates signed installers              |
+| `package`                            | `true`               | Upload workflow artifacts & publish release on tag            |
+| `build-platform`                     | `darwin/universal`   | Platform to build for                                         |
+| `wails-version`                      | `latest`             | Wails version to use                                          |
+| `wails-build-webview2`               | `download`           | Webview2 installing [download,embed,browser,error]            |
+| `wails-build-additional-params`      | ''                   | pass additional params to wails build                         |
+| `go-version`                         | `1.18`               | Version of Go to use                                          |
+| `node-version`                       | `16.x`               | Node js version                                               |
+| `pnpm-version`                       | ''                   | If specified, enables pnpm with the given version             |
+| `pnpm-working-directory`             | `.`                  | set pnpm working directory                                    |
+| `pnpm-install`                       | `true`               | run pnpm install                                              |
+| `pnpm-prebuild`                      | `false`              | use for monorepo builds                                       |
+| `deno-build`                         | ``                   | Deno compile command                                          |
+| `deno-working-directory`             | `.`                  | Working directory of your [Deno](https://deno.land/) server   |
+| `deno-version`                       | `v1.20.x`            | Deno version to use                                           |
+| `sign-macos-app-id`                  | ''                   | ID of the app signing cert                                    |
+| `sign-macos-apple-password`          | ''                   | MacOS Apple password                                          |
+| `sign-macos-app-cert`                | ''                   | MacOS Application Certificate                                 |
+| `sign-macos-app-cert-password`       | ''                   | MacOS Application Certificate Password                        |
+| `sign-macos-installer-id`            | ''                   | MacOS Installer Certificate id                                |
+| `sign-macos-installer-cert`          | ''                   | MacOS Installer Certificate                                   |
+| `sign-macos-installer-cert-password` | ''                   | MacOS Installer Certificate Password                          |
+| `sign-windows-cert`                  | ''                   | Windows Signing Certificate                                   |
+| `sign-windows-cert-passowrd`         | ''                   | Windows Signing Certificate Password                          |
 
 ## Example Build
 
